@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "devliftsapi-20180918215041-authRole",
+            "UnauthRoleArn": "arn:aws:iam::379451967279:role/devliftsapi-20180918215041-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::379451967279:role/devliftsapi-20180918215041-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "devliftsapi-20180918215041-deployment",
+            "UnauthRoleName": "devliftsapi-20180918215041-unauthRole",
+            "StackName": "devliftsapi-20180918215041",
+            "StackId": "arn:aws:cloudformation:us-east-1:379451967279:stack/devliftsapi-20180918215041/cc4d2550-bbb6-11e8-bb5d-500c217b4a62"
+        }
+    }
+}

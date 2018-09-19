@@ -1,0 +1,13 @@
+type Exercise @model {
+  id: ID!
+  name: String!
+  muscles: [Muscle] @connection(name: "ExerciseMuscles")
+}
+
+type Muscle @model {
+  id: ID!
+  group: String!
+  primary: String!
+  secondary: [String]
+  exercise: Exercise @connection(name: "ExerciseMuscles")
+}

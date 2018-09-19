@@ -1,0 +1,158 @@
+type Mutation {
+  createExercise(input: CreateExerciseInput!): Exercise
+  updateExercise(input: UpdateExerciseInput!): Exercise
+  deleteExercise(input: DeleteExerciseInput!): Exercise
+  createMuscle(input: CreateMuscleInput!): Muscle
+  updateMuscle(input: UpdateMuscleInput!): Muscle
+  deleteMuscle(input: DeleteMuscleInput!): Muscle
+}
+
+type Query {
+  getExercise(id: ID!): Exercise
+  listExercises(filter: ModelExerciseFilterInput, limit: Int, nextToken: String): ModelExerciseConnection
+  getMuscle(id: ID!): Muscle
+  listMuscles(filter: ModelMuscleFilterInput, limit: Int, nextToken: String): ModelMuscleConnection
+}
+
+type Subscription {
+  onCreateExercise: Exercise @aws_subscribe(mutations: ["createExercise"])
+  onUpdateExercise: Exercise @aws_subscribe(mutations: ["updateExercise"])
+  onDeleteExercise: Exercise @aws_subscribe(mutations: ["deleteExercise"])
+  onCreateMuscle: Muscle @aws_subscribe(mutations: ["createMuscle"])
+  onUpdateMuscle: Muscle @aws_subscribe(mutations: ["updateMuscle"])
+  onDeleteMuscle: Muscle @aws_subscribe(mutations: ["deleteMuscle"])
+}
+
+type Exercise {
+  id: ID!
+  name: String!
+  muscles(filter: ModelMuscleFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelMuscleConnection
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelExerciseConnection {
+  items: [Exercise]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelExerciseFilterInput {
+  id: ModelIDFilterInput
+  name: ModelStringFilterInput
+  and: [ModelExerciseFilterInput]
+  or: [ModelExerciseFilterInput]
+  not: ModelExerciseFilterInput
+}
+
+input CreateExerciseInput {
+  name: String!
+}
+
+input UpdateExerciseInput {
+  id: ID!
+  name: String
+}
+
+input DeleteExerciseInput {
+  id: ID
+}
+
+type Muscle {
+  id: ID!
+  group: String!
+  primary: String!
+  secondary: [String]
+  exercise: Exercise
+}
+
+type ModelMuscleConnection {
+  items: [Muscle]
+  nextToken: String
+}
+
+input ModelMuscleFilterInput {
+  id: ModelIDFilterInput
+  group: ModelStringFilterInput
+  primary: ModelStringFilterInput
+  secondary: ModelStringFilterInput
+  and: [ModelMuscleFilterInput]
+  or: [ModelMuscleFilterInput]
+  not: ModelMuscleFilterInput
+}
+
+input CreateMuscleInput {
+  group: String!
+  primary: String!
+  secondary: [String]
+  muscleExerciseId: ID
+}
+
+input UpdateMuscleInput {
+  id: ID!
+  group: String
+  primary: String
+  secondary: [String]
+  muscleExerciseId: ID
+}
+
+input DeleteMuscleInput {
+  id: ID
+}

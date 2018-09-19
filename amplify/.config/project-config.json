@@ -1,0 +1,20 @@
+{
+    "projectName": "devliftsapi",
+    "projectPath": "/Users/jchiatt/Dev/devlifts/devlifts-api",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/Users/jchiatt/.nodenv/versions/8.11.3/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "none",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script start"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/Users/jchiatt/.nodenv/versions/8.11.3/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
+    }
+}

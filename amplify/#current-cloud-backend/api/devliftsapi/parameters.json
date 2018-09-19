@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "devliftsapi",
+    "schemaGraphql": "s3://devliftsapi-20180918215041-deployment/amplify-appsync-files/schema.graphql.1537327251624",
+    "ResolverBucket": "devliftsapi-20180918215041-deployment",
+    "ResolverRootKey": "amplify-appsync-files",
+    "DeploymentTimestamp": "1537327251624"
+}
