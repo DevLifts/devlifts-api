@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/DevLifts/devlifts-api/issues"
   },
-  "homepage": "https://github.com/DevLifts/devlifts-api#readme"
+  "homepage": "https://github.com/DevLifts/devlifts-api#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
