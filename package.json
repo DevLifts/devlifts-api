@@ -1,0 +1,29 @@
+{
+  "name": "devlifts-api",
+  "version": "1.0.0",
+  "description": "API for all DevLifts-powered services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevLifts/devlifts-api.git"
+  },
+  "keywords": [
+    "fitness",
+    "fit",
+    "gym",
+    "workout",
+    "nutrition",
+    "calories",
+    "exercise",
+    "tracker"
+  ],
+  "author": "DevLifts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevLifts/devlifts-api/issues"
+  },
+  "homepage": "https://github.com/DevLifts/devlifts-api#readme"
+}
