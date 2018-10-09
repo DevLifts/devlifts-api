@@ -5,7 +5,9 @@
  */
 
 const debug = require('debug')('devliftsapi:server');
+
 const http = require('http');
+
 const app = require('../app');
 /**
  * Create HTTP server.
