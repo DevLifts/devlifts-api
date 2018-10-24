@@ -2,7 +2,6 @@ module.exports = {
 	"extends": [
 		"airbnb",
 		"prettier",
-		"prettier/react"
 	],
 	"parser": "babel-eslint",
 	"parserOptions": {
@@ -18,12 +17,6 @@ module.exports = {
 	"env": {
 		"browser": true,
 		"node": true,
-		"jquery": true
-	},
-	"settings": {
-		"import/core-modules": [
-			"react"
-		]
 	},
 	"rules": {
 		"no-unused-vars": [
@@ -62,15 +55,6 @@ module.exports = {
 		}],
 		"no-use-before-define": 0,
 		"object-curly-newline": 0,
-		"react/display-name": 1,
-		"react/react-in-jsx-scope": 0,
-		"react/forbid-prop-types": 0,
-		"react/no-unescaped-entities": 0,
-		"react/no-multi-comp": 0,
-		"react/prefer-stateless-function": 0,
-		"react/jsx-filename-extension": [1, {
-			"extensions": [".js", ".jsx"]
-		}],
 		"space-before-function-paren": 0,
 		"semi": ["error", "always"],
 		"max-len": 0,
@@ -106,6 +90,8 @@ module.exports = {
 		"jest": true,
       		"test": true,
       		"expect": true,
+      		"describe": true,
+      		"beforeEach": true,
       		"afterEach": true,
 	},
 	"plugins": [
