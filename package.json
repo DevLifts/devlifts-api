@@ -6,7 +6,7 @@
     "start": "node ./bin/www"
   },
   "engines": {
-    "node": ">=0.10.3 <0.12"
+    "node": ">=8"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
